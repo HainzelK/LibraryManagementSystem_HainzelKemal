@@ -52,7 +52,6 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     Route::prefix('librarian')->group(function () {
         
         // Library Inventory Routes
-        Route::get('/inventory', [LibrarianController::class, 'index']); // View library inventory
         Route::get('/books', [BookController::class, 'index'])->name('books.index');
         Route::get('/cds', [CDController::class, 'index'])->name('cds.index');
         Route::get('/journals', [JournalController::class, 'index'])->name('journals.index');
